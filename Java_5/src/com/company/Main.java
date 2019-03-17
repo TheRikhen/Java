@@ -1,18 +1,22 @@
 package com.company;
 
-
+import Package_1.*;
 import Package_1.Package_2.Package_3.Package_4.*;
-
+import Package_1.Package_2.*;
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        Package_1.AAA aaa = new Package_1.AAA(11);
+        AAA aaa = new AAA(11);
         aaa.Infout();
-        Package_1.Package_2.BBB bbb = new Package_1.Package_2.BBB(22);
+        //Package_1.Package_2.BBB bbb = new Package_1.Package_2.BBB(22);
+        //bbb.Infout();
+        //Package_1.Package_2.DDD ddd = new Package_1.Package_2.DDD(23);
+        //ddd.Infout();
+        BBB bbb = new BBB(22);
         bbb.Infout();
-        Package_1.Package_2.DDD ddd = new Package_1.Package_2.DDD(23);
+        DDD ddd = new DDD(23);
         ddd.Infout();
         //Package_1.Package_2.Package_3.Package_4.CCC ccc = new Package_1.Package_2.Package_3.Package_4.CCC(33);
         //ccc.Infout();
