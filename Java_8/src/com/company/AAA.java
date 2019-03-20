@@ -1,10 +1,1 @@
-package com.company;
-
-public class AAA {
-    public int var1;
-    public AAA(int x) throws Exception
-    {
-        var1 = x;
-    }
-
-}
+package com.company;public class AAA{    public int var1;    public AAA(Object one, Object two)    {        if (one == null || two == null)        {            throw new IllegalArgumentException("Parameters can't be null");        }    }public void getResult(int num) throws Exception1,Exception2    {            if (num == 0) throw new Exception1();            if (num < 0) throw new Exception2();    }}
