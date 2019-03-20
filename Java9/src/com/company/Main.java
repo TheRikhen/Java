@@ -2,6 +2,29 @@ package com.company;
 
 public class Main {
 
+    public enum planet
+    {
+        Marth,
+        Earth,
+        Jupiter
+    }
+
+    public enum Person
+    {
+        Petya(100,185),
+        Sasha(89,170),
+        Ilya(60,170);
+        private final int height;
+        private final int growth;
+        Person(int Height,int Growth)
+        {
+            this.height = Height;
+            this.growth = Growth;
+        }
+    }
+
+
+
     public static void main(String[] args) {
         String s01 = new String();
         System.out.println("s01.length = " + s01.length());
@@ -52,5 +75,30 @@ public class Main {
         String s11 = new String("Ехал Грека через реку, Видит Грека в реке рак, Сунул в реку руку Грека, Рак за руку Греку - цап.");
         System.out.println(s11.substring(25));
         System.out.println(s11.substring(11,25));
+
+        String s12 = new String("Оффтоп - это плохо, писать нужно по делу");
+        System.out.println(s12.toUpperCase());
+        System.out.println(s12.replace('ф','f'));
+        System.out.println(s12.toLowerCase());
+
+        StringBuffer s15 = new StringBuffer(100);
+        s15.append("Корабли  лавировали, лавировали да не вылавировали");
+        System.out.println("s15 length: " + s15.length());
+        System.out.println("s15 Capacity: " + s15.capacity());
+        s15.insert(8,"Hello");
+        System.out.println(s15);
+        System.out.println("s15 length: " + s15.length());
+        System.out.println("s15 Capacity: " + s15.capacity());
+        s15.delete(11,17);
+        System.out.println(s15);
+        s15.ensureCapacity(200);
+        System.out.println("s15 Capacity: " + s15.capacity());
+        String s16 = s15.toString();
+
+        planet Planet = planet.Earth;
+
+        Person person = Person.Petya;
+        System.out.println(person.growth);
+        System.out.println(person.height);
     }
 }
